@@ -33,9 +33,10 @@ for id,cn,name,color,ings,count,tip,engtip in entries:
    zh['tip.starfall.'+new]=f'爆炸伤害上限 {cap:g} 点；范围 ×{radius:g}。'+('可破坏地形。' if id=='blast_rocket' else '始终不破坏地形。')
    en['tip.starfall.'+new]=f'Explosion cap {cap:g} HP; radius x{radius:g}. '+('May break terrain.' if id=='blast_rocket' else 'Never breaks terrain.')
   elif id.endswith('arrow'):
-   desc={'frost_arrow':f'缓慢 II，持续 {3*duration:g} 秒','pulse_arrow':'更大范围击退','mark_arrow':f'发光 {8*duration:g} 秒'}[id]
+   desc={'frost_arrow':f'缓慢 II，持续 {3*duration:g} 秒','pulse_arrow':'更大范围击退','mark_arrow':f'发光 {8*duration:g} 秒','venom_arrow':f'中毒 I，持续 {3*duration:g} 秒','gravity_arrow':'水平牵引至落点'}[id]
    zh['tip.starfall.'+new]=f'直击 {4*damage:g} 点；{desc}；范围 ×{radius:g}。'
-   en['tip.starfall.'+new]=f'Direct hit {4*damage:g} HP; effect duration x{duration:g}; radius x{radius:g}.'
+   effect={'frost_arrow':f'Slowness II for {3*duration:g}s','pulse_arrow':'radial knockback','mark_arrow':f'Glowing for {8*duration:g}s','venom_arrow':f'Poison I for {3*duration:g}s','gravity_arrow':'horizontal pull toward impact'}[id]
+   en['tip.starfall.'+new]=f'Direct hit {4*damage:g} HP; {effect}; radius x{radius:g}.'
   else:
    zh['tip.starfall.'+new]=f'无伤害；绽放尺寸与粒子数量 ×{radius:g}。'
    en['tip.starfall.'+new]=f'Harmless; burst size and particle count x{radius:g}.'
@@ -45,4 +46,4 @@ for id,cn,name,color,ings,count,tip,engtip in entries:
 write('assets/starfall/lang/zh_cn.json',zh);write('assets/starfall/lang/en_us.json',en)
 write('data/minecraft/tags/item/arrows.json',{'replace':False,'values':all_arrows})
 p=pathlib.Path(__file__).resolve().parents[1]/'docs';p.mkdir(exist_ok=True);(p/'balance.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
-print('Expanded to 27 items with bounded upgrades and conservative conversion values.')
+print(f'Expanded to {len(rows)} items with bounded upgrades and conservative conversion values.')

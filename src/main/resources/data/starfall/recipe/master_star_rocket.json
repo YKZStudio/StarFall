@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:refined_star_rocket",
+    "minecraft:gunpowder",
+    "minecraft:gunpowder",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard",
+    "minecraft:gold_nugget"
+  ],
+  "result": {
+    "id": "starfall:master_star_rocket",
+    "count": 1
+  }
+}

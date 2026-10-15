@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:ender_pearl",
+    "minecraft:amethyst_shard"
+  ],
+  "result": {
+    "id": "starfall:gravity_arrow",
+    "count": 4
+  }
+}

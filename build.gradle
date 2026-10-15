@@ -17,10 +17,37 @@ java { toolchain.languageVersion = JavaLanguageVersion.of(25); withSourcesJar() 
 tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
 test { useJUnitPlatform() }
 jar { from('LICENSE') }
-sourceSets { smoke { compileClasspath += sourceSets.main.output; runtimeClasspath += sourceSets.main.output } }
+sourceSets { smoke {
+    compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+    runtimeClasspath += sourceSets.main.output + sourceSets.main.runtimeClasspath
+} }
 configurations { smokeImplementation.extendsFrom implementation }
 tasks.register('smokeJar', Jar) {
     dependsOn tasks.named('smokeClasses')
     archiveClassifier = 'smoke-tests'
     from sourceSets.smoke.output
+}
+// Explicit opt-in: the test mod stops its disposable server after assertions.
+if (providers.gradleProperty('starfallSmoke').isPresent()) {
+    loom {
+        mods { starfallSmoke { sourceSet sourceSets.smoke } }
+        runs {
+            smokeServer {
+                server()
+                source sourceSets.smoke
+                runDir 'build/smoke-server'
+                vmArgs '-Xmx2G'
+            }
+        }
+    }
+    tasks.named('runSmokeServer') {
+        def results = layout.buildDirectory.file('smoke-server/starfall-test-results.txt')
+        doFirst { results.get().asFile.delete() }
+        doLast {
+            def report = results.get().asFile
+            if (!report.exists() || !report.text.trim().endsWith('ALL SERVER TESTS PASSED')) {
+                throw new GradleException('Starfall server assertions failed; see build/smoke-server/starfall-test-results.txt')
+            }
+        }
+    }
 }

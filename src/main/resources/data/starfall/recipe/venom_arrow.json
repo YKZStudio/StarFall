@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:spider_eye",
+    "minecraft:slime_ball"
+  ],
+  "result": {
+    "id": "starfall:venom_arrow",
+    "count": 4
+  }
+}
