@@ -38,6 +38,7 @@ public final class Starfall implements ModInitializer {
     @Override public void onInitialize() {
         config = StarfallConfig.load();
         for (Kind kind : Kind.values()) for (Grade grade : Grade.values()) {
+            if (!grade.supports(kind)) continue;
             String path = grade.path(kind);
             var props = new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id(path)));
             if (kind.rocket) props.component(DataComponents.FIREWORKS, new Fireworks(1,

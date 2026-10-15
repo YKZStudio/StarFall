@@ -21,7 +21,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 1,
-    "grade": 1
+    "grade": 1,
+    "previous": "blast_rocket"
   },
   {
     "id": "master_blast_rocket",
@@ -35,7 +36,53 @@
       "minecraft:gold_nugget"
     ],
     "count": 1,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_blast_rocket"
+  },
+  {
+    "id": "heavy_blast_rocket",
+    "value": 14695,
+    "ingredients": [
+      "starfall:master_blast_rocket",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:iron_block",
+      "minecraft:iron_block",
+      "minecraft:diamond"
+    ],
+    "count": 1,
+    "grade": 3,
+    "previous": "master_blast_rocket"
+  },
+  {
+    "id": "siege_blast_rocket",
+    "value": 180666,
+    "ingredients": [
+      "starfall:heavy_blast_rocket",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:diamond_block",
+      "minecraft:diamond_block",
+      "minecraft:gold_block"
+    ],
+    "count": 1,
+    "grade": 4,
+    "previous": "heavy_blast_rocket"
+  },
+  {
+    "id": "cataclysm_blast_rocket",
+    "value": 385594,
+    "ingredients": [
+      "starfall:siege_blast_rocket",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:netherite_ingot",
+      "minecraft:netherite_ingot",
+      "minecraft:diamond_block"
+    ],
+    "count": 1,
+    "grade": 5,
+    "previous": "siege_blast_rocket"
   },
   {
     "id": "safe_rocket",
@@ -60,7 +107,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 1,
-    "grade": 1
+    "grade": 1,
+    "previous": "safe_rocket"
   },
   {
     "id": "master_safe_rocket",
@@ -74,7 +122,53 @@
       "minecraft:gold_nugget"
     ],
     "count": 1,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_safe_rocket"
+  },
+  {
+    "id": "heavy_safe_rocket",
+    "value": 14703,
+    "ingredients": [
+      "starfall:master_safe_rocket",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:iron_block",
+      "minecraft:iron_block",
+      "minecraft:diamond"
+    ],
+    "count": 1,
+    "grade": 3,
+    "previous": "master_safe_rocket"
+  },
+  {
+    "id": "siege_safe_rocket",
+    "value": 180674,
+    "ingredients": [
+      "starfall:heavy_safe_rocket",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:diamond_block",
+      "minecraft:diamond_block",
+      "minecraft:gold_block"
+    ],
+    "count": 1,
+    "grade": 4,
+    "previous": "heavy_safe_rocket"
+  },
+  {
+    "id": "cataclysm_safe_rocket",
+    "value": 385602,
+    "ingredients": [
+      "starfall:siege_safe_rocket",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:netherite_ingot",
+      "minecraft:netherite_ingot",
+      "minecraft:diamond_block"
+    ],
+    "count": 1,
+    "grade": 5,
+    "previous": "siege_safe_rocket"
   },
   {
     "id": "halo_rocket",
@@ -98,7 +192,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 1,
-    "grade": 1
+    "grade": 1,
+    "previous": "halo_rocket"
   },
   {
     "id": "master_halo_rocket",
@@ -112,7 +207,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 1,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_halo_rocket"
   },
   {
     "id": "willow_rocket",
@@ -136,7 +232,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 1,
-    "grade": 1
+    "grade": 1,
+    "previous": "willow_rocket"
   },
   {
     "id": "master_willow_rocket",
@@ -150,7 +247,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 1,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_willow_rocket"
   },
   {
     "id": "spiral_rocket",
@@ -174,7 +272,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 1,
-    "grade": 1
+    "grade": 1,
+    "previous": "spiral_rocket"
   },
   {
     "id": "master_spiral_rocket",
@@ -188,7 +287,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 1,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_spiral_rocket"
   },
   {
     "id": "star_rocket",
@@ -212,7 +312,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 1,
-    "grade": 1
+    "grade": 1,
+    "previous": "star_rocket"
   },
   {
     "id": "master_star_rocket",
@@ -226,7 +327,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 1,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_star_rocket"
   },
   {
     "id": "heart_rocket",
@@ -250,7 +352,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 1,
-    "grade": 1
+    "grade": 1,
+    "previous": "heart_rocket"
   },
   {
     "id": "master_heart_rocket",
@@ -264,7 +367,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 1,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_heart_rocket"
   },
   {
     "id": "blast_arrow",
@@ -291,7 +395,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 4,
-    "grade": 1
+    "grade": 1,
+    "previous": "blast_arrow"
   },
   {
     "id": "master_blast_arrow",
@@ -308,7 +413,62 @@
       "minecraft:gold_nugget"
     ],
     "count": 4,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_blast_arrow"
+  },
+  {
+    "id": "heavy_blast_arrow",
+    "value": 3642,
+    "ingredients": [
+      "starfall:master_blast_arrow",
+      "starfall:master_blast_arrow",
+      "starfall:master_blast_arrow",
+      "starfall:master_blast_arrow",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:iron_block",
+      "minecraft:iron_block",
+      "minecraft:diamond"
+    ],
+    "count": 4,
+    "grade": 3,
+    "previous": "master_blast_arrow"
+  },
+  {
+    "id": "siege_blast_arrow",
+    "value": 45134,
+    "ingredients": [
+      "starfall:heavy_blast_arrow",
+      "starfall:heavy_blast_arrow",
+      "starfall:heavy_blast_arrow",
+      "starfall:heavy_blast_arrow",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:diamond_block",
+      "minecraft:diamond_block",
+      "minecraft:gold_block"
+    ],
+    "count": 4,
+    "grade": 4,
+    "previous": "heavy_blast_arrow"
+  },
+  {
+    "id": "cataclysm_blast_arrow",
+    "value": 96366,
+    "ingredients": [
+      "starfall:siege_blast_arrow",
+      "starfall:siege_blast_arrow",
+      "starfall:siege_blast_arrow",
+      "starfall:siege_blast_arrow",
+      "minecraft:tnt",
+      "minecraft:tnt",
+      "minecraft:netherite_ingot",
+      "minecraft:netherite_ingot",
+      "minecraft:diamond_block"
+    ],
+    "count": 4,
+    "grade": 5,
+    "previous": "siege_blast_arrow"
   },
   {
     "id": "frost_arrow",
@@ -335,7 +495,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 4,
-    "grade": 1
+    "grade": 1,
+    "previous": "frost_arrow"
   },
   {
     "id": "master_frost_arrow",
@@ -352,7 +513,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 4,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_frost_arrow"
   },
   {
     "id": "pulse_arrow",
@@ -380,7 +542,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 4,
-    "grade": 1
+    "grade": 1,
+    "previous": "pulse_arrow"
   },
   {
     "id": "master_pulse_arrow",
@@ -397,7 +560,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 4,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_pulse_arrow"
   },
   {
     "id": "mark_arrow",
@@ -423,7 +587,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 4,
-    "grade": 1
+    "grade": 1,
+    "previous": "mark_arrow"
   },
   {
     "id": "master_mark_arrow",
@@ -440,7 +605,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 4,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_mark_arrow"
   },
   {
     "id": "venom_arrow",
@@ -467,7 +633,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 4,
-    "grade": 1
+    "grade": 1,
+    "previous": "venom_arrow"
   },
   {
     "id": "master_venom_arrow",
@@ -484,7 +651,8 @@
       "minecraft:gold_nugget"
     ],
     "count": 4,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_venom_arrow"
   },
   {
     "id": "gravity_arrow",
@@ -511,7 +679,8 @@
       "minecraft:copper_ingot"
     ],
     "count": 4,
-    "grade": 1
+    "grade": 1,
+    "previous": "gravity_arrow"
   },
   {
     "id": "master_gravity_arrow",
@@ -528,6 +697,7 @@
       "minecraft:gold_nugget"
     ],
     "count": 4,
-    "grade": 2
+    "grade": 2,
+    "previous": "refined_gravity_arrow"
   }
 ]

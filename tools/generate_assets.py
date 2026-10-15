@@ -20,7 +20,7 @@ entries=[
 ('gravity_arrow','引星·牵引箭','Starward Gravity Arrow','7588DC',{'arrow':4,'ender_pearl':1,'amethyst_shard':1},4,'直击 4 点；将 3 格内目标水平拉向落点；不穿墙。','4 HP direct hit; pulls targets within 3 blocks horizontally toward impact; blocked by walls.')]
 # Equal purchase/salvage unit prices rounded DOWN from ingredient value/output.
 # Never make crafting yield more energy than its input.
-prices={'arrow':33,'firework_rocket':64,'gunpowder':192,'paper':64,'iron_ingot':252,'copper_ingot':8,'amethyst_shard':64,'snowball':64,'glowstone_dust':64,'slime_ball':8,'feather':64,'gold_nugget':227,'redstone':64,'spider_eye':64,'ender_pearl':1024}
+prices={'arrow':33,'firework_rocket':64,'gunpowder':192,'paper':64,'iron_ingot':252,'copper_ingot':8,'amethyst_shard':64,'snowball':64,'glowstone_dust':64,'slime_ball':8,'feather':64,'gold_nugget':227,'redstone':64,'spider_eye':64,'ender_pearl':1024,'tnt':64,'iron_block':2268,'diamond':8192,'diamond_block':73728,'gold_block':18387,'netherite_ingot':65536}
 zh={'itemGroup.starfall':'星火工坊','modmenu.nameTranslation.starfall':'星火工坊'}
 en={'itemGroup.starfall':'Starfall Workshop','modmenu.nameTranslation.starfall':'Starfall Workshop'}
 for id,cn,name,color,ingredients,count,tip,engtip in entries:

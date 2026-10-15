@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:master_safe_rocket",
+    "minecraft:tnt",
+    "minecraft:tnt",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "id": "starfall:heavy_safe_rocket",
+    "count": 1
+  }
+}

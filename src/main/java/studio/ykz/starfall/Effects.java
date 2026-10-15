@@ -19,7 +19,7 @@ public final class Effects {
   return true;
  }
  public static void detonate(ServerLevel level, Projectile source, Vec3 point, Kind kind, Grade grade) {
-  if (kind == Kind.BLAST_ROCKET || kind == Kind.SAFE_ROCKET || kind == Kind.BLAST_ARROW) {
+  if (kind.explosive()) {
    boolean terrain = Balance.breaksTerrain(kind != Kind.BLAST_ROCKET, Starfall.config.terrainDamage)
       && source.mayInteract(level, net.minecraft.core.BlockPos.containing(point)) && source.mayBreak(level);
    float power = kind == Kind.BLAST_ARROW ? 1.2f * grade.radius : Starfall.config.explosionPower * grade.radius;
@@ -27,8 +27,11 @@ public final class Effects {
     @Override public boolean shouldDamageEntity(Explosion e, Entity target) { return allowed(source,target) && super.shouldDamageEntity(e,target); }
     @Override public float getKnockbackMultiplier(Entity target) { return allowed(source,target) ? super.getKnockbackMultiplier(target) : 0; }
     @Override public float getEntityDamageAmount(Explosion e, Entity target, float exposure) {
-     // Cap point-blank damage before armor: 10 HP rockets, 6 HP arrows.
-     return Math.min((kind == Kind.BLAST_ARROW ? 6 : 10) * grade.damage, super.getEntityDamageAmount(e,target,exposure)) * Starfall.config.damageScale;
+     // High payloads scale actual damage as well as the cap; raising only the cap
+     // would leave them limited by vanilla explosion damage at this radius.
+     float raw = super.getEntityDamageAmount(e,target,exposure);
+     return Balance.explosionDamage(raw,kind == Kind.BLAST_ARROW ? 6 : 10,
+         grade.damage,grade.ordinal()>Grade.MASTER.ordinal(),Starfall.config.damageScale);
     }
    };
    level.explode(source, level.damageSources().explosion(source,source.getOwner()), calculator,

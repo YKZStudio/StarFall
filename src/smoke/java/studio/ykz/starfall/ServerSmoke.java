@@ -38,13 +38,14 @@ public final class ServerSmoke implements ModInitializer {
   });
  }
  private void run(ServerLevel l) throws Exception {
-  check(Starfall.ITEMS.size()==39,"39 items registered");
+  check(Starfall.ITEMS.size()==48,"48 items registered");
   var owner=new Zombie(l);owner.setNoAi(true);owner.setPos(0,104,0);
   var crossbow=(CrossbowItem)Items.CROSSBOW;
   var create=CrossbowItem.class.getDeclaredMethod("createProjectile",Level.class,LivingEntity.class,ItemStack.class,ItemStack.class,boolean.class);create.setAccessible(true);
   var ammo=ProjectileWeaponItem.class.getDeclaredMethod("useAmmo",ItemStack.class,ItemStack.class,LivingEntity.class,boolean.class);ammo.setAccessible(true);
   var explode=FireworkRocketEntity.class.getDeclaredMethod("explode",ServerLevel.class);explode.setAccessible(true);
   for(Kind k:Kind.values()) for(Grade g:Grade.values()) {
+   if(!g.supports(k)) {check(!Starfall.ITEMS.containsKey(g.path(k)),"No unsupported grade "+g.path(k));continue;}
    var stack=item(g.path(k));
    check(crossbow.getAllSupportedProjectiles().test(stack),"Crossbow accepts "+g.path(k));
    var projectile=(Projectile)create.invoke(crossbow,l,owner,new ItemStack(Items.CROSSBOW),stack,false);
@@ -72,6 +73,7 @@ public final class ServerSmoke implements ModInitializer {
    check(r.isRemoved(),"Rocket consumed exactly once "+g);mob.discard();
   }
   for(Kind kind:Kind.values()) if(kind.decorative()) for(Grade grade:Grade.values()) {
+   if(!grade.supports(kind))continue;
    Vec3 p=new Vec3(80,100,0);var mob=new Zombie(l);mob.setNoAi(true);mob.setPos(p);l.addFreshEntity(mob);
    BlockPos floor=BlockPos.containing(p).below();l.setBlock(floor,Blocks.GLASS.defaultBlockState(),3);
    var r=new FireworkRocketEntity(l,owner,p.x,p.y,p.z,item(grade.path(kind)));explode.invoke(r,l);
@@ -80,19 +82,20 @@ public final class ServerSmoke implements ModInitializer {
    check(r.isRemoved(),"Ornamental rocket consumed "+grade.path(kind));mob.discard();
   }
   checkNewArrows(l,owner);
+  checkHighPayloads(l,owner);
   var mob=new Zombie(l);mob.setNoAi(true);mob.setPos(100,100,0);l.addFreshEntity(mob);
   var a=new StarArrowEntity(l,100,100,1,item("master_frost_arrow"));
   Effects.detonate(l,a,new Vec3(100,100,1),Kind.FROST_ARROW,Grade.MASTER);
   check(mob.hasEffect(MobEffects.SLOWNESS),"Frost effect applied");
   check(mob.getEffect(MobEffects.SLOWNESS).getDuration()==120,"Master frost duration 6s");mob.discard();
   // Actual ordinary blast must obey both states of the terrain setting.
-  for(boolean enabled:new boolean[]{false,true}) {
+  for(Grade grade:Grade.values()) for(boolean enabled:new boolean[]{false,true}) {
    Starfall.config.terrainDamage=enabled;
-   Vec3 p=new Vec3(112,100,0);
+   Vec3 p=new Vec3(64,180,0);
    for(BlockPos b:BlockPos.betweenClosed(BlockPos.containing(p).offset(-2,-1,-2),BlockPos.containing(p).offset(2,-1,2)))l.setBlock(b,Blocks.GLASS.defaultBlockState(),3);
-   var r=new FireworkRocketEntity(l,owner,p.x,p.y,p.z,item("blast_rocket"));explode.invoke(r,l);
+   var r=new FireworkRocketEntity(l,owner,p.x,p.y,p.z,item(grade.path(Kind.BLAST_ROCKET)));explode.invoke(r,l);
    int left=0;for(BlockPos b:BlockPos.betweenClosed(BlockPos.containing(p).offset(-2,-1,-2),BlockPos.containing(p).offset(2,-1,2)))if(l.getBlockState(b).is(Blocks.GLASS))left++;
-   check(enabled?left<25:left==25,"Ordinary terrain switch "+enabled);
+   check(enabled?left<25:left==25,"Ordinary terrain switch "+grade+" "+enabled);
   }
   Starfall.config.terrainDamage=true;
   // Check the real EnergyExchange rule loader rather than just JSON syntax.
@@ -117,6 +120,7 @@ public final class ServerSmoke implements ModInitializer {
  private void checkNewArrows(ServerLevel l,LivingEntity owner) {
   Vec3 p=new Vec3(96,110,0);
   for(Kind kind:new Kind[]{Kind.VENOM_ARROW,Kind.GRAVITY_ARROW}) for(Grade grade:Grade.values()) {
+   if(!grade.supports(kind))continue;
    String id=grade.path(kind);
    // The west target is close enough but hidden behind a solid two-block wall.
    for(int y=0;y<3;y++) for(int z=-1;z<=1;z++) l.setBlock(new BlockPos(95,110+y,z),Blocks.STONE.defaultBlockState(),3);
@@ -151,5 +155,42 @@ public final class ServerSmoke implements ModInitializer {
    check(kind==Kind.VENOM_ARROW?target.hasEffect(MobEffects.POISON):target.getDeltaMovement().x<0,"Block impact applies area effect "+id);
    check(l.getBlockState(floor).is(Blocks.GLASS),"New arrow preserves terrain "+id);target.discard();
   }
+ }
+ private Cow durableCow(ServerLevel l,Vec3 p) {
+  var mob=cow(l,p);mob.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH).setBaseValue(1000);mob.setHealth(1000);return mob;
+ }
+ private void checkHighPayloads(ServerLevel l,LivingEntity owner) {
+  Starfall.config.terrainDamage=false;
+  Vec3 p=new Vec3(64,140,0);
+  for(Kind kind:new Kind[]{Kind.BLAST_ROCKET,Kind.SAFE_ROCKET,Kind.BLAST_ARROW}) {
+   float previous=0;
+   for(Grade grade:new Grade[]{Grade.MASTER,Grade.HEAVY,Grade.SIEGE,Grade.CATACLYSM}) {
+    var target=durableCow(l,p.add(1,0,0));var distant=durableCow(l,p.add(8,0,0));
+    var arrow=new StarArrowEntity(l,p.x,p.y,p.z,item(grade.path(Kind.BLAST_ARROW)));arrow.setOwner(owner);
+    Effects.detonate(l,arrow,p,kind,grade);
+    float damage=1000-target.getHealth(),cap=(kind.rocket?10:6)*grade.damage;
+    check(damage>previous,"Payload damage grows "+grade.path(kind)+" = "+damage);
+    check(damage<=cap+.01,"Payload damage stays capped "+grade.path(kind));
+    if(grade==Grade.CATACLYSM) {
+     check(Math.abs(damage-cap)<.01,"Cataclysm reaches stated cap "+kind+" = "+damage);
+     check(distant.getHealth()<1000,"Cataclysm expanded damage reach "+kind);
+    }
+    previous=damage;target.discard();distant.discard();
+   }
+  }
+  // A complete wall must not amplify vanilla's one-point explosion minimum.
+  for(int y=138;y<=145;y++) for(int z=-3;z<=3;z++)l.setBlock(new BlockPos(66,y,z),Blocks.OBSIDIAN.defaultBlockState(),3);
+  var hidden=durableCow(l,p.add(3,0,0));var open=durableCow(l,p.add(0,0,3));
+  var arrow=new StarArrowEntity(l,p.x,p.y,p.z,item("cataclysm_blast_arrow"));arrow.setOwner(owner);
+  Effects.detonate(l,arrow,p,Kind.BLAST_ARROW,Grade.CATACLYSM);
+  check(hidden.getHealth()==1000,"Full cover blocks cataclysm damage");
+  check(open.getHealth()<800,"Uncovered cataclysm remains lethal");hidden.discard();open.discard();
+  Starfall.config.damageScale=0;
+  var disabled=durableCow(l,p.add(1,0,0));Effects.detonate(l,arrow,p,Kind.SAFE_ROCKET,Grade.CATACLYSM);
+  check(disabled.getHealth()==1000,"Zero damage config still disables cataclysm damage");disabled.discard();
+  Starfall.config.damageScale=2;
+  var boosted=durableCow(l,p.add(1,0,0));Effects.detonate(l,arrow,p,Kind.SAFE_ROCKET,Grade.CATACLYSM);
+  check(Math.abs(1000-boosted.getHealth()-800)<.01,"Configured cataclysm reaches 800 HP");boosted.discard();
+  Starfall.config.damageScale=1;Starfall.config.terrainDamage=true;
  }
 }

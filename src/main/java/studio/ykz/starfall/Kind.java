@@ -18,6 +18,7 @@ public enum Kind {
     public final boolean rocket;
     public final int color;
     Kind(String id, boolean rocket, int color) { this.id = id; this.rocket = rocket; this.color = color; }
+    public boolean explosive() { return this == BLAST_ROCKET || this == SAFE_ROCKET || this == BLAST_ARROW; }
     public boolean decorative() {
         return this == HALO_ROCKET || this == WILLOW_ROCKET || this == SPIRAL_ROCKET
             || this == STAR_ROCKET || this == HEART_ROCKET;

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:master_blast_arrow",
+    "starfall:master_blast_arrow",
+    "starfall:master_blast_arrow",
+    "starfall:master_blast_arrow",
+    "minecraft:tnt",
+    "minecraft:tnt",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "id": "starfall:heavy_blast_arrow",
+    "count": 4
+  }
+}
