@@ -1,0 +1,145 @@
+PASS 27 items registered
+PASS Crossbow accepts blast_rocket
+PASS Correct projectile blast_rocket
+PASS One ammo consumed blast_rocket
+PASS Crossbow accepts refined_blast_rocket
+PASS Correct projectile refined_blast_rocket
+PASS One ammo consumed refined_blast_rocket
+PASS Crossbow accepts master_blast_rocket
+PASS Correct projectile master_blast_rocket
+PASS One ammo consumed master_blast_rocket
+PASS Crossbow accepts safe_rocket
+PASS Correct projectile safe_rocket
+PASS One ammo consumed safe_rocket
+PASS Crossbow accepts refined_safe_rocket
+PASS Correct projectile refined_safe_rocket
+PASS One ammo consumed refined_safe_rocket
+PASS Crossbow accepts master_safe_rocket
+PASS Correct projectile master_safe_rocket
+PASS One ammo consumed master_safe_rocket
+PASS Crossbow accepts halo_rocket
+PASS Correct projectile halo_rocket
+PASS One ammo consumed halo_rocket
+PASS Crossbow accepts refined_halo_rocket
+PASS Correct projectile refined_halo_rocket
+PASS One ammo consumed refined_halo_rocket
+PASS Crossbow accepts master_halo_rocket
+PASS Correct projectile master_halo_rocket
+PASS One ammo consumed master_halo_rocket
+PASS Crossbow accepts willow_rocket
+PASS Correct projectile willow_rocket
+PASS One ammo consumed willow_rocket
+PASS Crossbow accepts refined_willow_rocket
+PASS Correct projectile refined_willow_rocket
+PASS One ammo consumed refined_willow_rocket
+PASS Crossbow accepts master_willow_rocket
+PASS Correct projectile master_willow_rocket
+PASS One ammo consumed master_willow_rocket
+PASS Crossbow accepts spiral_rocket
+PASS Correct projectile spiral_rocket
+PASS One ammo consumed spiral_rocket
+PASS Crossbow accepts refined_spiral_rocket
+PASS Correct projectile refined_spiral_rocket
+PASS One ammo consumed refined_spiral_rocket
+PASS Crossbow accepts master_spiral_rocket
+PASS Correct projectile master_spiral_rocket
+PASS One ammo consumed master_spiral_rocket
+PASS Crossbow accepts blast_arrow
+PASS Correct projectile blast_arrow
+PASS One ammo consumed blast_arrow
+PASS Synced 3D arrow model blast_arrow
+PASS Crossbow accepts refined_blast_arrow
+PASS Correct projectile refined_blast_arrow
+PASS One ammo consumed refined_blast_arrow
+PASS Synced 3D arrow model refined_blast_arrow
+PASS Crossbow accepts master_blast_arrow
+PASS Correct projectile master_blast_arrow
+PASS One ammo consumed master_blast_arrow
+PASS Synced 3D arrow model master_blast_arrow
+PASS Crossbow accepts frost_arrow
+PASS Correct projectile frost_arrow
+PASS One ammo consumed frost_arrow
+PASS Synced 3D arrow model frost_arrow
+PASS Crossbow accepts refined_frost_arrow
+PASS Correct projectile refined_frost_arrow
+PASS One ammo consumed refined_frost_arrow
+PASS Synced 3D arrow model refined_frost_arrow
+PASS Crossbow accepts master_frost_arrow
+PASS Correct projectile master_frost_arrow
+PASS One ammo consumed master_frost_arrow
+PASS Synced 3D arrow model master_frost_arrow
+PASS Crossbow accepts pulse_arrow
+PASS Correct projectile pulse_arrow
+PASS One ammo consumed pulse_arrow
+PASS Synced 3D arrow model pulse_arrow
+PASS Crossbow accepts refined_pulse_arrow
+PASS Correct projectile refined_pulse_arrow
+PASS One ammo consumed refined_pulse_arrow
+PASS Synced 3D arrow model refined_pulse_arrow
+PASS Crossbow accepts master_pulse_arrow
+PASS Correct projectile master_pulse_arrow
+PASS One ammo consumed master_pulse_arrow
+PASS Synced 3D arrow model master_pulse_arrow
+PASS Crossbow accepts mark_arrow
+PASS Correct projectile mark_arrow
+PASS One ammo consumed mark_arrow
+PASS Synced 3D arrow model mark_arrow
+PASS Crossbow accepts refined_mark_arrow
+PASS Correct projectile refined_mark_arrow
+PASS One ammo consumed refined_mark_arrow
+PASS Synced 3D arrow model refined_mark_arrow
+PASS Crossbow accepts master_mark_arrow
+PASS Correct projectile master_mark_arrow
+PASS One ammo consumed master_mark_arrow
+PASS Synced 3D arrow model master_mark_arrow
+PASS Test target is tracked BASIC
+PASS Safe rocket hurts entities BASIC
+PASS Safe rocket damage bounded BASIC
+PASS Safe rocket preserves all 49 glass blocks BASIC
+PASS Rocket consumed exactly once BASIC
+PASS Test target is tracked REFINED
+PASS Safe rocket hurts entities REFINED
+PASS Safe rocket damage bounded REFINED
+PASS Safe rocket preserves all 49 glass blocks REFINED
+PASS Rocket consumed exactly once REFINED
+PASS Test target is tracked MASTER
+PASS Safe rocket hurts entities MASTER
+PASS Safe rocket damage bounded MASTER
+PASS Safe rocket preserves all 49 glass blocks MASTER
+PASS Rocket consumed exactly once MASTER
+PASS Ornamental rocket has no native damage HALO_ROCKET
+PASS Ornamental rocket has no native damage WILLOW_ROCKET
+PASS Ornamental rocket has no native damage SPIRAL_ROCKET
+PASS Frost effect applied
+PASS Master frost duration 6s
+PASS Ordinary terrain switch false
+PASS Ordinary terrain switch true
+PASS EnergyExchange price blast_rocket = 700
+PASS EnergyExchange price refined_blast_rocket = 1100
+PASS EnergyExchange price master_blast_rocket = 1839
+PASS EnergyExchange price safe_rocket = 708
+PASS EnergyExchange price refined_safe_rocket = 1108
+PASS EnergyExchange price master_safe_rocket = 1847
+PASS EnergyExchange price halo_rocket = 355
+PASS EnergyExchange price refined_halo_rocket = 755
+PASS EnergyExchange price master_halo_rocket = 1494
+PASS EnergyExchange price willow_rocket = 136
+PASS EnergyExchange price refined_willow_rocket = 536
+PASS EnergyExchange price master_willow_rocket = 1275
+PASS EnergyExchange price spiral_rocket = 192
+PASS EnergyExchange price refined_spiral_rocket = 592
+PASS EnergyExchange price master_spiral_rocket = 1331
+PASS EnergyExchange price blast_arrow = 144
+PASS EnergyExchange price refined_blast_arrow = 244
+PASS EnergyExchange price master_blast_arrow = 428
+PASS EnergyExchange price frost_arrow = 81
+PASS EnergyExchange price refined_frost_arrow = 181
+PASS EnergyExchange price master_frost_arrow = 365
+PASS EnergyExchange price pulse_arrow = 67
+PASS EnergyExchange price refined_pulse_arrow = 167
+PASS EnergyExchange price master_pulse_arrow = 351
+PASS EnergyExchange price mark_arrow = 49
+PASS EnergyExchange price refined_mark_arrow = 149
+PASS EnergyExchange price master_mark_arrow = 333
+PASS Terrain gate respects safe identity
+ALL SERVER TESTS PASSED

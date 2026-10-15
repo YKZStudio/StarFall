@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:blast_arrow",
+    "starfall:blast_arrow",
+    "starfall:blast_arrow",
+    "starfall:blast_arrow",
+    "minecraft:gunpowder",
+    "minecraft:gunpowder",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot"
+  ],
+  "result": {
+    "id": "starfall:refined_blast_arrow",
+    "count": 4
+  }
+}

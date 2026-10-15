@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:glowstone_dust"
+  ],
+  "result": {
+    "id": "starfall:mark_arrow",
+    "count": 4
+  }
+}

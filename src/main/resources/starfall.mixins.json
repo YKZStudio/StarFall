@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "studio.ykz.starfall.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "RocketMixin",
+    "CrossbowMixin",
+    "AmmoMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

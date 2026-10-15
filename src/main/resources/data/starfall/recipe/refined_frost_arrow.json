@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:frost_arrow",
+    "starfall:frost_arrow",
+    "starfall:frost_arrow",
+    "starfall:frost_arrow",
+    "minecraft:gunpowder",
+    "minecraft:gunpowder",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot"
+  ],
+  "result": {
+    "id": "starfall:refined_frost_arrow",
+    "count": 4
+  }
+}

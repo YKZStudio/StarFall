@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:arrow",
+    "minecraft:snowball",
+    "minecraft:snowball",
+    "minecraft:amethyst_shard"
+  ],
+  "result": {
+    "id": "starfall:frost_arrow",
+    "count": 4
+  }
+}

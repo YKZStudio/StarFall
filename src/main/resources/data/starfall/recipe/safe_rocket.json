@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:firework_rocket",
+    "minecraft:gunpowder",
+    "minecraft:gunpowder",
+    "minecraft:iron_ingot",
+    "minecraft:slime_ball"
+  ],
+  "result": {
+    "id": "starfall:safe_rocket",
+    "count": 1
+  }
+}

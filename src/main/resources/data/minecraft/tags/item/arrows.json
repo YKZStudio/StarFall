@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "starfall:blast_arrow",
+    "starfall:refined_blast_arrow",
+    "starfall:master_blast_arrow",
+    "starfall:frost_arrow",
+    "starfall:refined_frost_arrow",
+    "starfall:master_frost_arrow",
+    "starfall:pulse_arrow",
+    "starfall:refined_pulse_arrow",
+    "starfall:master_pulse_arrow",
+    "starfall:mark_arrow",
+    "starfall:refined_mark_arrow",
+    "starfall:master_mark_arrow"
+  ]
+}
