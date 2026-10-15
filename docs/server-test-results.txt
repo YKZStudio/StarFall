@@ -1,4 +1,4 @@
-PASS 27 items registered
+PASS 39 items registered
 PASS Crossbow accepts blast_rocket
 PASS Correct projectile blast_rocket
 PASS One ammo consumed blast_rocket
@@ -44,6 +44,24 @@ PASS One ammo consumed refined_spiral_rocket
 PASS Crossbow accepts master_spiral_rocket
 PASS Correct projectile master_spiral_rocket
 PASS One ammo consumed master_spiral_rocket
+PASS Crossbow accepts star_rocket
+PASS Correct projectile star_rocket
+PASS One ammo consumed star_rocket
+PASS Crossbow accepts refined_star_rocket
+PASS Correct projectile refined_star_rocket
+PASS One ammo consumed refined_star_rocket
+PASS Crossbow accepts master_star_rocket
+PASS Correct projectile master_star_rocket
+PASS One ammo consumed master_star_rocket
+PASS Crossbow accepts heart_rocket
+PASS Correct projectile heart_rocket
+PASS One ammo consumed heart_rocket
+PASS Crossbow accepts refined_heart_rocket
+PASS Correct projectile refined_heart_rocket
+PASS One ammo consumed refined_heart_rocket
+PASS Crossbow accepts master_heart_rocket
+PASS Correct projectile master_heart_rocket
+PASS One ammo consumed master_heart_rocket
 PASS Crossbow accepts blast_arrow
 PASS Correct projectile blast_arrow
 PASS One ammo consumed blast_arrow
@@ -92,6 +110,30 @@ PASS Crossbow accepts master_mark_arrow
 PASS Correct projectile master_mark_arrow
 PASS One ammo consumed master_mark_arrow
 PASS Synced 3D arrow model master_mark_arrow
+PASS Crossbow accepts venom_arrow
+PASS Correct projectile venom_arrow
+PASS One ammo consumed venom_arrow
+PASS Synced 3D arrow model venom_arrow
+PASS Crossbow accepts refined_venom_arrow
+PASS Correct projectile refined_venom_arrow
+PASS One ammo consumed refined_venom_arrow
+PASS Synced 3D arrow model refined_venom_arrow
+PASS Crossbow accepts master_venom_arrow
+PASS Correct projectile master_venom_arrow
+PASS One ammo consumed master_venom_arrow
+PASS Synced 3D arrow model master_venom_arrow
+PASS Crossbow accepts gravity_arrow
+PASS Correct projectile gravity_arrow
+PASS One ammo consumed gravity_arrow
+PASS Synced 3D arrow model gravity_arrow
+PASS Crossbow accepts refined_gravity_arrow
+PASS Correct projectile refined_gravity_arrow
+PASS One ammo consumed refined_gravity_arrow
+PASS Synced 3D arrow model refined_gravity_arrow
+PASS Crossbow accepts master_gravity_arrow
+PASS Correct projectile master_gravity_arrow
+PASS One ammo consumed master_gravity_arrow
+PASS Synced 3D arrow model master_gravity_arrow
 PASS Test target is tracked BASIC
 PASS Safe rocket hurts entities BASIC
 PASS Safe rocket damage bounded BASIC
@@ -107,9 +149,111 @@ PASS Safe rocket hurts entities MASTER
 PASS Safe rocket damage bounded MASTER
 PASS Safe rocket preserves all 49 glass blocks MASTER
 PASS Rocket consumed exactly once MASTER
-PASS Ornamental rocket has no native damage HALO_ROCKET
-PASS Ornamental rocket has no native damage WILLOW_ROCKET
-PASS Ornamental rocket has no native damage SPIRAL_ROCKET
+PASS Ornamental rocket has no native damage halo_rocket
+PASS Ornamental rocket preserves terrain halo_rocket
+PASS Ornamental rocket consumed halo_rocket
+PASS Ornamental rocket has no native damage refined_halo_rocket
+PASS Ornamental rocket preserves terrain refined_halo_rocket
+PASS Ornamental rocket consumed refined_halo_rocket
+PASS Ornamental rocket has no native damage master_halo_rocket
+PASS Ornamental rocket preserves terrain master_halo_rocket
+PASS Ornamental rocket consumed master_halo_rocket
+PASS Ornamental rocket has no native damage willow_rocket
+PASS Ornamental rocket preserves terrain willow_rocket
+PASS Ornamental rocket consumed willow_rocket
+PASS Ornamental rocket has no native damage refined_willow_rocket
+PASS Ornamental rocket preserves terrain refined_willow_rocket
+PASS Ornamental rocket consumed refined_willow_rocket
+PASS Ornamental rocket has no native damage master_willow_rocket
+PASS Ornamental rocket preserves terrain master_willow_rocket
+PASS Ornamental rocket consumed master_willow_rocket
+PASS Ornamental rocket has no native damage spiral_rocket
+PASS Ornamental rocket preserves terrain spiral_rocket
+PASS Ornamental rocket consumed spiral_rocket
+PASS Ornamental rocket has no native damage refined_spiral_rocket
+PASS Ornamental rocket preserves terrain refined_spiral_rocket
+PASS Ornamental rocket consumed refined_spiral_rocket
+PASS Ornamental rocket has no native damage master_spiral_rocket
+PASS Ornamental rocket preserves terrain master_spiral_rocket
+PASS Ornamental rocket consumed master_spiral_rocket
+PASS Ornamental rocket has no native damage star_rocket
+PASS Ornamental rocket preserves terrain star_rocket
+PASS Ornamental rocket consumed star_rocket
+PASS Ornamental rocket has no native damage refined_star_rocket
+PASS Ornamental rocket preserves terrain refined_star_rocket
+PASS Ornamental rocket consumed refined_star_rocket
+PASS Ornamental rocket has no native damage master_star_rocket
+PASS Ornamental rocket preserves terrain master_star_rocket
+PASS Ornamental rocket consumed master_star_rocket
+PASS Ornamental rocket has no native damage heart_rocket
+PASS Ornamental rocket preserves terrain heart_rocket
+PASS Ornamental rocket consumed heart_rocket
+PASS Ornamental rocket has no native damage refined_heart_rocket
+PASS Ornamental rocket preserves terrain refined_heart_rocket
+PASS Ornamental rocket consumed refined_heart_rocket
+PASS Ornamental rocket has no native damage master_heart_rocket
+PASS Ornamental rocket preserves terrain master_heart_rocket
+PASS Ornamental rocket consumed master_heart_rocket
+PASS Direct-hit damage venom_arrow
+PASS New arrow consumed on entity impact venom_arrow
+PASS Venom applied venom_arrow
+PASS Venom duration venom_arrow
+PASS Venom remains level I venom_arrow
+PASS Wall blocks venom venom_arrow
+PASS Venom range bounded venom_arrow
+PASS New arrow consumed on block impact venom_arrow
+PASS Block impact applies area effect venom_arrow
+PASS New arrow preserves terrain venom_arrow
+PASS Direct-hit damage refined_venom_arrow
+PASS New arrow consumed on entity impact refined_venom_arrow
+PASS Venom applied refined_venom_arrow
+PASS Venom duration refined_venom_arrow
+PASS Venom remains level I refined_venom_arrow
+PASS Wall blocks venom refined_venom_arrow
+PASS Venom range bounded refined_venom_arrow
+PASS New arrow consumed on block impact refined_venom_arrow
+PASS Block impact applies area effect refined_venom_arrow
+PASS New arrow preserves terrain refined_venom_arrow
+PASS Direct-hit damage master_venom_arrow
+PASS New arrow consumed on entity impact master_venom_arrow
+PASS Venom applied master_venom_arrow
+PASS Venom duration master_venom_arrow
+PASS Venom remains level I master_venom_arrow
+PASS Wall blocks venom master_venom_arrow
+PASS Venom range bounded master_venom_arrow
+PASS New arrow consumed on block impact master_venom_arrow
+PASS Block impact applies area effect master_venom_arrow
+PASS New arrow preserves terrain master_venom_arrow
+PASS Direct-hit damage gravity_arrow
+PASS New arrow consumed on entity impact gravity_arrow
+PASS Gravity pulls horizontally toward impact gravity_arrow
+PASS Gravity impulse bounded gravity_arrow
+PASS Wall blocks gravity gravity_arrow
+PASS Gravity range bounded gravity_arrow
+PASS Centered gravity target stays finite and still gravity_arrow
+PASS New arrow consumed on block impact gravity_arrow
+PASS Block impact applies area effect gravity_arrow
+PASS New arrow preserves terrain gravity_arrow
+PASS Direct-hit damage refined_gravity_arrow
+PASS New arrow consumed on entity impact refined_gravity_arrow
+PASS Gravity pulls horizontally toward impact refined_gravity_arrow
+PASS Gravity impulse bounded refined_gravity_arrow
+PASS Wall blocks gravity refined_gravity_arrow
+PASS Gravity range bounded refined_gravity_arrow
+PASS Centered gravity target stays finite and still refined_gravity_arrow
+PASS New arrow consumed on block impact refined_gravity_arrow
+PASS Block impact applies area effect refined_gravity_arrow
+PASS New arrow preserves terrain refined_gravity_arrow
+PASS Direct-hit damage master_gravity_arrow
+PASS New arrow consumed on entity impact master_gravity_arrow
+PASS Gravity pulls horizontally toward impact master_gravity_arrow
+PASS Gravity impulse bounded master_gravity_arrow
+PASS Wall blocks gravity master_gravity_arrow
+PASS Gravity range bounded master_gravity_arrow
+PASS Centered gravity target stays finite and still master_gravity_arrow
+PASS New arrow consumed on block impact master_gravity_arrow
+PASS Block impact applies area effect master_gravity_arrow
+PASS New arrow preserves terrain master_gravity_arrow
 PASS Frost effect applied
 PASS Master frost duration 6s
 PASS Ordinary terrain switch false
@@ -129,6 +273,12 @@ PASS EnergyExchange price master_willow_rocket = 1275
 PASS EnergyExchange price spiral_rocket = 192
 PASS EnergyExchange price refined_spiral_rocket = 592
 PASS EnergyExchange price master_spiral_rocket = 1331
+PASS EnergyExchange price star_rocket = 192
+PASS EnergyExchange price refined_star_rocket = 592
+PASS EnergyExchange price master_star_rocket = 1331
+PASS EnergyExchange price heart_rocket = 136
+PASS EnergyExchange price refined_heart_rocket = 536
+PASS EnergyExchange price master_heart_rocket = 1275
 PASS EnergyExchange price blast_arrow = 144
 PASS EnergyExchange price refined_blast_arrow = 244
 PASS EnergyExchange price master_blast_arrow = 428
@@ -141,5 +291,11 @@ PASS EnergyExchange price master_pulse_arrow = 351
 PASS EnergyExchange price mark_arrow = 49
 PASS EnergyExchange price refined_mark_arrow = 149
 PASS EnergyExchange price master_mark_arrow = 333
+PASS EnergyExchange price venom_arrow = 51
+PASS EnergyExchange price refined_venom_arrow = 151
+PASS EnergyExchange price master_venom_arrow = 335
+PASS EnergyExchange price gravity_arrow = 305
+PASS EnergyExchange price refined_gravity_arrow = 405
+PASS EnergyExchange price master_gravity_arrow = 589
 PASS Terrain gate respects safe identity
 ALL SERVER TESTS PASSED

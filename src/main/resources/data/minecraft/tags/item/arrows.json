@@ -12,6 +12,12 @@
     "starfall:master_pulse_arrow",
     "starfall:mark_arrow",
     "starfall:refined_mark_arrow",
-    "starfall:master_mark_arrow"
+    "starfall:master_mark_arrow",
+    "starfall:venom_arrow",
+    "starfall:refined_venom_arrow",
+    "starfall:master_venom_arrow",
+    "starfall:gravity_arrow",
+    "starfall:refined_gravity_arrow",
+    "starfall:master_gravity_arrow"
   ]
 }

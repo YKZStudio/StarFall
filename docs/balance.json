@@ -191,6 +191,82 @@
     "grade": 2
   },
   {
+    "id": "star_rocket",
+    "value": 192,
+    "ingredients": {
+      "firework_rocket": 1,
+      "glowstone_dust": 1,
+      "amethyst_shard": 1
+    },
+    "count": 1,
+    "grade": 0
+  },
+  {
+    "id": "refined_star_rocket",
+    "value": 592,
+    "ingredients": [
+      "starfall:star_rocket",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:copper_ingot",
+      "minecraft:copper_ingot"
+    ],
+    "count": 1,
+    "grade": 1
+  },
+  {
+    "id": "master_star_rocket",
+    "value": 1331,
+    "ingredients": [
+      "starfall:refined_star_rocket",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:amethyst_shard",
+      "minecraft:amethyst_shard",
+      "minecraft:gold_nugget"
+    ],
+    "count": 1,
+    "grade": 2
+  },
+  {
+    "id": "heart_rocket",
+    "value": 136,
+    "ingredients": {
+      "firework_rocket": 1,
+      "redstone": 1,
+      "slime_ball": 1
+    },
+    "count": 1,
+    "grade": 0
+  },
+  {
+    "id": "refined_heart_rocket",
+    "value": 536,
+    "ingredients": [
+      "starfall:heart_rocket",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:copper_ingot",
+      "minecraft:copper_ingot"
+    ],
+    "count": 1,
+    "grade": 1
+  },
+  {
+    "id": "master_heart_rocket",
+    "value": 1275,
+    "ingredients": [
+      "starfall:refined_heart_rocket",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:amethyst_shard",
+      "minecraft:amethyst_shard",
+      "minecraft:gold_nugget"
+    ],
+    "count": 1,
+    "grade": 2
+  },
+  {
     "id": "blast_arrow",
     "value": 144,
     "ingredients": {
@@ -357,6 +433,94 @@
       "starfall:refined_mark_arrow",
       "starfall:refined_mark_arrow",
       "starfall:refined_mark_arrow",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:amethyst_shard",
+      "minecraft:amethyst_shard",
+      "minecraft:gold_nugget"
+    ],
+    "count": 4,
+    "grade": 2
+  },
+  {
+    "id": "venom_arrow",
+    "value": 51,
+    "ingredients": {
+      "arrow": 4,
+      "spider_eye": 1,
+      "slime_ball": 1
+    },
+    "count": 4,
+    "grade": 0
+  },
+  {
+    "id": "refined_venom_arrow",
+    "value": 151,
+    "ingredients": [
+      "starfall:venom_arrow",
+      "starfall:venom_arrow",
+      "starfall:venom_arrow",
+      "starfall:venom_arrow",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:copper_ingot",
+      "minecraft:copper_ingot"
+    ],
+    "count": 4,
+    "grade": 1
+  },
+  {
+    "id": "master_venom_arrow",
+    "value": 335,
+    "ingredients": [
+      "starfall:refined_venom_arrow",
+      "starfall:refined_venom_arrow",
+      "starfall:refined_venom_arrow",
+      "starfall:refined_venom_arrow",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:amethyst_shard",
+      "minecraft:amethyst_shard",
+      "minecraft:gold_nugget"
+    ],
+    "count": 4,
+    "grade": 2
+  },
+  {
+    "id": "gravity_arrow",
+    "value": 305,
+    "ingredients": {
+      "arrow": 4,
+      "ender_pearl": 1,
+      "amethyst_shard": 1
+    },
+    "count": 4,
+    "grade": 0
+  },
+  {
+    "id": "refined_gravity_arrow",
+    "value": 405,
+    "ingredients": [
+      "starfall:gravity_arrow",
+      "starfall:gravity_arrow",
+      "starfall:gravity_arrow",
+      "starfall:gravity_arrow",
+      "minecraft:gunpowder",
+      "minecraft:gunpowder",
+      "minecraft:copper_ingot",
+      "minecraft:copper_ingot"
+    ],
+    "count": 4,
+    "grade": 1
+  },
+  {
+    "id": "master_gravity_arrow",
+    "value": 589,
+    "ingredients": [
+      "starfall:refined_gravity_arrow",
+      "starfall:refined_gravity_arrow",
+      "starfall:refined_gravity_arrow",
+      "starfall:refined_gravity_arrow",
       "minecraft:gunpowder",
       "minecraft:gunpowder",
       "minecraft:amethyst_shard",

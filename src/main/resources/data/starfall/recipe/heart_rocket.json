@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:firework_rocket",
+    "minecraft:redstone",
+    "minecraft:slime_ball"
+  ],
+  "result": {
+    "id": "starfall:heart_rocket",
+    "count": 1
+  }
+}
