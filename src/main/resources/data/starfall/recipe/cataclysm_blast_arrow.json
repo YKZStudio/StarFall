@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:siege_blast_arrow",
+    "starfall:siege_blast_arrow",
+    "starfall:siege_blast_arrow",
+    "starfall:siege_blast_arrow",
+    "minecraft:tnt",
+    "minecraft:tnt",
+    "minecraft:netherite_ingot",
+    "minecraft:netherite_ingot",
+    "minecraft:diamond_block"
+  ],
+  "result": {
+    "id": "starfall:cataclysm_blast_arrow",
+    "count": 4
+  }
+}

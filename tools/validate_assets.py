@@ -1,10 +1,12 @@
 """Validate IDs, resources, grade recipes and EnergyExchange anti-arbitrage."""
 import json,pathlib,re
 r=pathlib.Path(__file__).resolve().parents[1];res=r/'src/main/resources'
-rows=json.loads((r/'docs/balance.json').read_text());values={'minecraft:'+k:v for k,v in {'arrow':33,'firework_rocket':64,'gunpowder':192,'iron_ingot':252,'copper_ingot':8,'amethyst_shard':64,'snowball':64,'glowstone_dust':64,'slime_ball':8,'gold_nugget':227,'redstone':64,'spider_eye':64,'ender_pearl':1024}.items()}
+rows=json.loads((r/'docs/balance.json').read_text());values={'minecraft:'+k:v for k,v in {'arrow':33,'firework_rocket':64,'gunpowder':192,'iron_ingot':252,'copper_ingot':8,'amethyst_shard':64,'snowball':64,'glowstone_dust':64,'slime_ball':8,'gold_nugget':227,'redstone':64,'spider_eye':64,'ender_pearl':1024,'tnt':64,'iron_block':2268,'diamond':8192,'diamond_block':73728,'gold_block':18387,'netherite_ingot':65536}.items()}
 # Compare generated resources against actual runtime registration, including grades.
 kinds=re.findall(r'\("([a-z_]+)", (?:true|false), 0x', (r/'src/main/java/studio/ykz/starfall/Kind.java').read_text())
-expected={prefix+kind for kind in kinds for prefix in ('','refined_','master_')}
+prefixes=re.findall(r'[A-Z]+\("([a-z_]*)",', (r/'src/main/java/studio/ykz/starfall/Grade.java').read_text())
+explosives={'blast_rocket','safe_rocket','blast_arrow'}
+expected={prefix+kind for kind in kinds for i,prefix in enumerate(prefixes) if i<3 or kind in explosives}
 assert len(rows)==len(expected)
 assert {row['id'] for row in rows}==expected
 for folder in ('data/starfall/recipe','data/starfall/advancement/recipes','data/starfall/energyexchange/values','assets/starfall/items','assets/starfall/models/item'):
@@ -30,7 +32,8 @@ for row in rows:
  for box in model['elements']:
   assert all(-16<=a<=b<=32 for a,b in zip(box['from'],box['to']))
  if row['grade']>0:
-  base=id.removeprefix('master_').removeprefix('refined_');prev=base if row['grade']==1 else 'refined_'+base
+  prev=row['previous']
+  assert recipe['ingredients'].count('starfall:'+prev)==row['count']
   assert row['value']>values['starfall:'+prev]
 zh=json.loads((res/'assets/starfall/lang/zh_cn.json').read_text());en=json.loads((res/'assets/starfall/lang/en_us.json').read_text())
 assert zh.keys()==en.keys()

@@ -11,4 +11,10 @@ public final class Balance {
         return Float.isFinite(value) ? Math.max(min, Math.min(max, value)) : fallback;
     }
     public static boolean breaksTerrain(boolean safe, boolean enabled) { return !safe && enabled; }
+    public static float explosionDamage(float vanillaDamage, float baseCap, float gradeDamage, boolean highPayload, float damageScale) {
+        // Do not amplify vanilla's one-HP minimum through complete cover.
+        if (vanillaDamage<=0) return 0;
+        float scaled = highPayload ? Math.max(0,vanillaDamage-1)*gradeDamage : vanillaDamage;
+        return Math.min(baseCap*gradeDamage,scaled)*damageScale;
+    }
 }

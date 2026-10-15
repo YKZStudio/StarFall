@@ -1,4 +1,4 @@
-PASS 39 items registered
+PASS 48 items registered
 PASS Crossbow accepts blast_rocket
 PASS Correct projectile blast_rocket
 PASS One ammo consumed blast_rocket
@@ -8,6 +8,15 @@ PASS One ammo consumed refined_blast_rocket
 PASS Crossbow accepts master_blast_rocket
 PASS Correct projectile master_blast_rocket
 PASS One ammo consumed master_blast_rocket
+PASS Crossbow accepts heavy_blast_rocket
+PASS Correct projectile heavy_blast_rocket
+PASS One ammo consumed heavy_blast_rocket
+PASS Crossbow accepts siege_blast_rocket
+PASS Correct projectile siege_blast_rocket
+PASS One ammo consumed siege_blast_rocket
+PASS Crossbow accepts cataclysm_blast_rocket
+PASS Correct projectile cataclysm_blast_rocket
+PASS One ammo consumed cataclysm_blast_rocket
 PASS Crossbow accepts safe_rocket
 PASS Correct projectile safe_rocket
 PASS One ammo consumed safe_rocket
@@ -17,6 +26,15 @@ PASS One ammo consumed refined_safe_rocket
 PASS Crossbow accepts master_safe_rocket
 PASS Correct projectile master_safe_rocket
 PASS One ammo consumed master_safe_rocket
+PASS Crossbow accepts heavy_safe_rocket
+PASS Correct projectile heavy_safe_rocket
+PASS One ammo consumed heavy_safe_rocket
+PASS Crossbow accepts siege_safe_rocket
+PASS Correct projectile siege_safe_rocket
+PASS One ammo consumed siege_safe_rocket
+PASS Crossbow accepts cataclysm_safe_rocket
+PASS Correct projectile cataclysm_safe_rocket
+PASS One ammo consumed cataclysm_safe_rocket
 PASS Crossbow accepts halo_rocket
 PASS Correct projectile halo_rocket
 PASS One ammo consumed halo_rocket
@@ -26,6 +44,9 @@ PASS One ammo consumed refined_halo_rocket
 PASS Crossbow accepts master_halo_rocket
 PASS Correct projectile master_halo_rocket
 PASS One ammo consumed master_halo_rocket
+PASS No unsupported grade heavy_halo_rocket
+PASS No unsupported grade siege_halo_rocket
+PASS No unsupported grade cataclysm_halo_rocket
 PASS Crossbow accepts willow_rocket
 PASS Correct projectile willow_rocket
 PASS One ammo consumed willow_rocket
@@ -35,6 +56,9 @@ PASS One ammo consumed refined_willow_rocket
 PASS Crossbow accepts master_willow_rocket
 PASS Correct projectile master_willow_rocket
 PASS One ammo consumed master_willow_rocket
+PASS No unsupported grade heavy_willow_rocket
+PASS No unsupported grade siege_willow_rocket
+PASS No unsupported grade cataclysm_willow_rocket
 PASS Crossbow accepts spiral_rocket
 PASS Correct projectile spiral_rocket
 PASS One ammo consumed spiral_rocket
@@ -44,6 +68,9 @@ PASS One ammo consumed refined_spiral_rocket
 PASS Crossbow accepts master_spiral_rocket
 PASS Correct projectile master_spiral_rocket
 PASS One ammo consumed master_spiral_rocket
+PASS No unsupported grade heavy_spiral_rocket
+PASS No unsupported grade siege_spiral_rocket
+PASS No unsupported grade cataclysm_spiral_rocket
 PASS Crossbow accepts star_rocket
 PASS Correct projectile star_rocket
 PASS One ammo consumed star_rocket
@@ -53,6 +80,9 @@ PASS One ammo consumed refined_star_rocket
 PASS Crossbow accepts master_star_rocket
 PASS Correct projectile master_star_rocket
 PASS One ammo consumed master_star_rocket
+PASS No unsupported grade heavy_star_rocket
+PASS No unsupported grade siege_star_rocket
+PASS No unsupported grade cataclysm_star_rocket
 PASS Crossbow accepts heart_rocket
 PASS Correct projectile heart_rocket
 PASS One ammo consumed heart_rocket
@@ -62,6 +92,9 @@ PASS One ammo consumed refined_heart_rocket
 PASS Crossbow accepts master_heart_rocket
 PASS Correct projectile master_heart_rocket
 PASS One ammo consumed master_heart_rocket
+PASS No unsupported grade heavy_heart_rocket
+PASS No unsupported grade siege_heart_rocket
+PASS No unsupported grade cataclysm_heart_rocket
 PASS Crossbow accepts blast_arrow
 PASS Correct projectile blast_arrow
 PASS One ammo consumed blast_arrow
@@ -74,6 +107,18 @@ PASS Crossbow accepts master_blast_arrow
 PASS Correct projectile master_blast_arrow
 PASS One ammo consumed master_blast_arrow
 PASS Synced 3D arrow model master_blast_arrow
+PASS Crossbow accepts heavy_blast_arrow
+PASS Correct projectile heavy_blast_arrow
+PASS One ammo consumed heavy_blast_arrow
+PASS Synced 3D arrow model heavy_blast_arrow
+PASS Crossbow accepts siege_blast_arrow
+PASS Correct projectile siege_blast_arrow
+PASS One ammo consumed siege_blast_arrow
+PASS Synced 3D arrow model siege_blast_arrow
+PASS Crossbow accepts cataclysm_blast_arrow
+PASS Correct projectile cataclysm_blast_arrow
+PASS One ammo consumed cataclysm_blast_arrow
+PASS Synced 3D arrow model cataclysm_blast_arrow
 PASS Crossbow accepts frost_arrow
 PASS Correct projectile frost_arrow
 PASS One ammo consumed frost_arrow
@@ -86,6 +131,9 @@ PASS Crossbow accepts master_frost_arrow
 PASS Correct projectile master_frost_arrow
 PASS One ammo consumed master_frost_arrow
 PASS Synced 3D arrow model master_frost_arrow
+PASS No unsupported grade heavy_frost_arrow
+PASS No unsupported grade siege_frost_arrow
+PASS No unsupported grade cataclysm_frost_arrow
 PASS Crossbow accepts pulse_arrow
 PASS Correct projectile pulse_arrow
 PASS One ammo consumed pulse_arrow
@@ -98,6 +146,9 @@ PASS Crossbow accepts master_pulse_arrow
 PASS Correct projectile master_pulse_arrow
 PASS One ammo consumed master_pulse_arrow
 PASS Synced 3D arrow model master_pulse_arrow
+PASS No unsupported grade heavy_pulse_arrow
+PASS No unsupported grade siege_pulse_arrow
+PASS No unsupported grade cataclysm_pulse_arrow
 PASS Crossbow accepts mark_arrow
 PASS Correct projectile mark_arrow
 PASS One ammo consumed mark_arrow
@@ -110,6 +161,9 @@ PASS Crossbow accepts master_mark_arrow
 PASS Correct projectile master_mark_arrow
 PASS One ammo consumed master_mark_arrow
 PASS Synced 3D arrow model master_mark_arrow
+PASS No unsupported grade heavy_mark_arrow
+PASS No unsupported grade siege_mark_arrow
+PASS No unsupported grade cataclysm_mark_arrow
 PASS Crossbow accepts venom_arrow
 PASS Correct projectile venom_arrow
 PASS One ammo consumed venom_arrow
@@ -122,6 +176,9 @@ PASS Crossbow accepts master_venom_arrow
 PASS Correct projectile master_venom_arrow
 PASS One ammo consumed master_venom_arrow
 PASS Synced 3D arrow model master_venom_arrow
+PASS No unsupported grade heavy_venom_arrow
+PASS No unsupported grade siege_venom_arrow
+PASS No unsupported grade cataclysm_venom_arrow
 PASS Crossbow accepts gravity_arrow
 PASS Correct projectile gravity_arrow
 PASS One ammo consumed gravity_arrow
@@ -134,6 +191,9 @@ PASS Crossbow accepts master_gravity_arrow
 PASS Correct projectile master_gravity_arrow
 PASS One ammo consumed master_gravity_arrow
 PASS Synced 3D arrow model master_gravity_arrow
+PASS No unsupported grade heavy_gravity_arrow
+PASS No unsupported grade siege_gravity_arrow
+PASS No unsupported grade cataclysm_gravity_arrow
 PASS Test target is tracked BASIC
 PASS Safe rocket hurts entities BASIC
 PASS Safe rocket damage bounded BASIC
@@ -149,6 +209,21 @@ PASS Safe rocket hurts entities MASTER
 PASS Safe rocket damage bounded MASTER
 PASS Safe rocket preserves all 49 glass blocks MASTER
 PASS Rocket consumed exactly once MASTER
+PASS Test target is tracked HEAVY
+PASS Safe rocket hurts entities HEAVY
+PASS Safe rocket damage bounded HEAVY
+PASS Safe rocket preserves all 49 glass blocks HEAVY
+PASS Rocket consumed exactly once HEAVY
+PASS Test target is tracked SIEGE
+PASS Safe rocket hurts entities SIEGE
+PASS Safe rocket damage bounded SIEGE
+PASS Safe rocket preserves all 49 glass blocks SIEGE
+PASS Rocket consumed exactly once SIEGE
+PASS Test target is tracked CATACLYSM
+PASS Safe rocket hurts entities CATACLYSM
+PASS Safe rocket damage bounded CATACLYSM
+PASS Safe rocket preserves all 49 glass blocks CATACLYSM
+PASS Rocket consumed exactly once CATACLYSM
 PASS Ornamental rocket has no native damage halo_rocket
 PASS Ornamental rocket preserves terrain halo_rocket
 PASS Ornamental rocket consumed halo_rocket
@@ -254,16 +329,66 @@ PASS Centered gravity target stays finite and still master_gravity_arrow
 PASS New arrow consumed on block impact master_gravity_arrow
 PASS Block impact applies area effect master_gravity_arrow
 PASS New arrow preserves terrain master_gravity_arrow
+PASS Payload damage grows master_blast_rocket = 16.5
+PASS Payload damage stays capped master_blast_rocket
+PASS Payload damage grows heavy_blast_rocket = 40.0
+PASS Payload damage stays capped heavy_blast_rocket
+PASS Payload damage grows siege_blast_rocket = 120.0
+PASS Payload damage stays capped siege_blast_rocket
+PASS Payload damage grows cataclysm_blast_rocket = 400.0
+PASS Payload damage stays capped cataclysm_blast_rocket
+PASS Cataclysm reaches stated cap BLAST_ROCKET = 400.0
+PASS Cataclysm expanded damage reach BLAST_ROCKET
+PASS Payload damage grows master_safe_rocket = 16.5
+PASS Payload damage stays capped master_safe_rocket
+PASS Payload damage grows heavy_safe_rocket = 40.0
+PASS Payload damage stays capped heavy_safe_rocket
+PASS Payload damage grows siege_safe_rocket = 120.0
+PASS Payload damage stays capped siege_safe_rocket
+PASS Payload damage grows cataclysm_safe_rocket = 400.0
+PASS Payload damage stays capped cataclysm_safe_rocket
+PASS Cataclysm reaches stated cap SAFE_ROCKET = 400.0
+PASS Cataclysm expanded damage reach SAFE_ROCKET
+PASS Payload damage grows master_blast_arrow = 9.900024
+PASS Payload damage stays capped master_blast_arrow
+PASS Payload damage grows heavy_blast_arrow = 24.0
+PASS Payload damage stays capped heavy_blast_arrow
+PASS Payload damage grows siege_blast_arrow = 72.0
+PASS Payload damage stays capped siege_blast_arrow
+PASS Payload damage grows cataclysm_blast_arrow = 240.0
+PASS Payload damage stays capped cataclysm_blast_arrow
+PASS Cataclysm reaches stated cap BLAST_ARROW = 240.0
+PASS Cataclysm expanded damage reach BLAST_ARROW
+PASS Full cover blocks cataclysm damage
+PASS Uncovered cataclysm remains lethal
+PASS Zero damage config still disables cataclysm damage
+PASS Configured cataclysm reaches 800 HP
 PASS Frost effect applied
 PASS Master frost duration 6s
-PASS Ordinary terrain switch false
-PASS Ordinary terrain switch true
+PASS Ordinary terrain switch BASIC false
+PASS Ordinary terrain switch BASIC true
+PASS Ordinary terrain switch REFINED false
+PASS Ordinary terrain switch REFINED true
+PASS Ordinary terrain switch MASTER false
+PASS Ordinary terrain switch MASTER true
+PASS Ordinary terrain switch HEAVY false
+PASS Ordinary terrain switch HEAVY true
+PASS Ordinary terrain switch SIEGE false
+PASS Ordinary terrain switch SIEGE true
+PASS Ordinary terrain switch CATACLYSM false
+PASS Ordinary terrain switch CATACLYSM true
 PASS EnergyExchange price blast_rocket = 700
 PASS EnergyExchange price refined_blast_rocket = 1100
 PASS EnergyExchange price master_blast_rocket = 1839
+PASS EnergyExchange price heavy_blast_rocket = 14695
+PASS EnergyExchange price siege_blast_rocket = 180666
+PASS EnergyExchange price cataclysm_blast_rocket = 385594
 PASS EnergyExchange price safe_rocket = 708
 PASS EnergyExchange price refined_safe_rocket = 1108
 PASS EnergyExchange price master_safe_rocket = 1847
+PASS EnergyExchange price heavy_safe_rocket = 14703
+PASS EnergyExchange price siege_safe_rocket = 180674
+PASS EnergyExchange price cataclysm_safe_rocket = 385602
 PASS EnergyExchange price halo_rocket = 355
 PASS EnergyExchange price refined_halo_rocket = 755
 PASS EnergyExchange price master_halo_rocket = 1494
@@ -282,6 +407,9 @@ PASS EnergyExchange price master_heart_rocket = 1275
 PASS EnergyExchange price blast_arrow = 144
 PASS EnergyExchange price refined_blast_arrow = 244
 PASS EnergyExchange price master_blast_arrow = 428
+PASS EnergyExchange price heavy_blast_arrow = 3642
+PASS EnergyExchange price siege_blast_arrow = 45134
+PASS EnergyExchange price cataclysm_blast_arrow = 96366
 PASS EnergyExchange price frost_arrow = 81
 PASS EnergyExchange price refined_frost_arrow = 181
 PASS EnergyExchange price master_frost_arrow = 365

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:siege_blast_rocket",
+    "minecraft:tnt",
+    "minecraft:tnt",
+    "minecraft:netherite_ingot",
+    "minecraft:netherite_ingot",
+    "minecraft:diamond_block"
+  ],
+  "result": {
+    "id": "starfall:cataclysm_blast_rocket",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starfall:heavy_blast_arrow",
+    "starfall:heavy_blast_arrow",
+    "starfall:heavy_blast_arrow",
+    "starfall:heavy_blast_arrow",
+    "minecraft:tnt",
+    "minecraft:tnt",
+    "minecraft:diamond_block",
+    "minecraft:diamond_block",
+    "minecraft:gold_block"
+  ],
+  "result": {
+    "id": "starfall:siege_blast_arrow",
+    "count": 4
+  }
+}
